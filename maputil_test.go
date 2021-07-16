@@ -9,7 +9,7 @@ func TestInArray(t *testing.T) {
 	m := make(map[string]string)
 	m["name"] = "samy"
 
-	if InArray("samy", m) {
+	if InMap("samy", m) {
 		fmt.Println("YES")
 	}
 }
@@ -17,7 +17,14 @@ func TestInArray(t *testing.T) {
 func TestArrayKeyExists(t *testing.T) {
 	m := make(map[string]string)
 	m["name"] = "samy"
-	if ok := ArrayKeyExists(11, m); ok {
+	if ok := MapKeyExists("name", m); ok {
 		fmt.Println("YES")
 	}
+}
+
+func TestArrayKeys(t *testing.T) {
+	m := make(map[string]string)
+	m["a"] = "15"
+	m["b"] = "samy"
+	fmt.Println(MapKeys(m))
 }

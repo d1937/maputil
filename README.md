@@ -1,6 +1,6 @@
 ##  Functions
 ### map Functions
-```php
+```golang
 Keys()  获取map所有key
 KeyExists() 判断指定key是否在map中
 InMap() 判断指定key是否在map中

@@ -5,26 +5,29 @@ import (
 	"testing"
 )
 
-func TestInArray(t *testing.T) {
+func TestKeys(t *testing.T) {
 	m := make(map[string]string)
 	m["name"] = "samy"
+	m["addr"] = "gz"
+	fmt.Println(Keys(m))
+}
 
-	if InMap("samy", m) {
+func TestKeyExists(t *testing.T) {
+	m := make(map[string]string)
+	m["name"] = "samy"
+	m["addr"] = "gz"
+	if KeyExists("name1", m) {
 		fmt.Println("YES")
 	}
 }
 
-func TestArrayKeyExists(t *testing.T) {
+func TestInMap(t *testing.T) {
 	m := make(map[string]string)
 	m["name"] = "samy"
-	if ok := MapKeyExists("name", m); ok {
+	m["addr"] = "gz"
+
+	if InMap("gz", m) {
 		fmt.Println("YES")
 	}
-}
 
-func TestArrayKeys(t *testing.T) {
-	m := make(map[string]string)
-	m["a"] = "15"
-	m["b"] = "samy"
-	fmt.Println(MapKeys(m))
 }

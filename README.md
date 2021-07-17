@@ -1,7 +1,8 @@
 ##  Functions
 ### map Functions
 ```php
-MapKeys()  获取map所有key
-MapKeyExists() 判断指定key是否在map中
+Keys()  获取map所有key
+KeyExists() 判断指定key是否在map中
 InMap() 判断指定key是否在map中
+Values() 获取map全部values
 ```
